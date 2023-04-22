@@ -1,0 +1,43 @@
+# prettyPrintBoard() prints the board with row and column labels,
+#                    and spaces the board out so that it looks square
+# Input:             board;   the rectangular 2d gameboard to print
+# Output:            None;    prints the board in a pretty way
+def prettyPrintBoard(board):
+
+    print() # empty line
+
+    # if enough columns, print a "tens column" line above
+    if len(board[0])-2 >= 10:
+        print("{:25s}".format(""), end="")  # empty space for 1 - 9
+        for i in range(10, len(board[0])-1 ):
+            print( str(i // 10), end =" ")
+        print()
+
+    # create and print top numbered line
+    print("       ", end="")
+    # only go from 1 to len - 1, so we don't number the borders
+    for i in range(1, len(board[0])-1 ):
+        # only print the last digit (so 15 --> 5)
+        print(str(i % 10), end = " ")
+    print()
+
+    # create the border row
+    borderRow = "     "
+    for col in range(len(board[0])):
+        borderRow += board[0][col] + " "
+
+    # print the top border row
+    print(borderRow)
+                         
+    # print all the interior rows
+    for row in range(1, len(board) - 1):
+        # print the row label
+        print("{:3d}  ".format(row), end="")
+
+        # print the row contents
+        for col in range(len(board[row])):
+            print(str(board[row][col]), end = " ")
+        print()
+
+    # print the bottom border row and an empty line
+    print(borderRow, "\n")

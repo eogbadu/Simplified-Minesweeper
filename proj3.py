@@ -1,10 +1,3 @@
-# File:         proj3.py
-# Author:       Ekele Ogbadu
-# Date:         2 MAY 2019
-# Section:      09
-# E-mail:       eogbadu1@umbc.edu
-# Description:  A simplified version of the game minesweeper
-
 # Constants used in printing output
 INTRO              = "\t This program allows you to play Minesweeper. \n \t The object of the game is to flag every mine, \n \t using clues about the number of neighboring \n \t mines in each field. To win the game, flag \n \t all of the mines (and don't incorrectly flag \n \t any non-mine fields).   Good luck!"
 
